@@ -1,9 +1,15 @@
-body
-  background-color: #000
-  font-family: 'Helvetica Neue', Sans Serif
-  font-size: 18px
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300&subset=latin,vietnamese)
+
+html
+  // -webkit-text-stroke-width: .05px
+  // -webkit-text-stroke-color: white
   -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
+body
+  background-color: #fff
+  font-family: 'Roboto', Sans Serif
+  font-size: 18px
+a
+  text-decoration: none
 
 .header
   position: relative
@@ -23,10 +29,14 @@ body
     opacity: .4
     background-color: rgba(44,44,44,1)
 
-.logo 
+.left-side
+  position: relative
+  min-width: 640px
+  padding-left: 80px
   z-index: 1
+
+.logo 
   img
-    position: relative
     background-repeat: no-repeat
     width: 177px
     height: 39px
@@ -39,45 +49,55 @@ body
 
 .iphone, .android
   position: absolute
-  top: 93px
+  top: 92px
   left: 580px
   z-index: 1
 .android
   left: 820px
   z-index: 0
+  top: 93px
 
 .download
+  max-width: 480px
   margin-top: 2rem
   padding: 1rem 0
+  padding-bottom: 20px
   border-bottom: solid 1px rgba(255,255,255,0.2)
   span
-    color: #ccc
+    display: block
+    color: #fff
     line-height: 3rem
-  input
+  input.number
+    border: none
     display: inline-block
     float: left
     font-size: 1.2rem
-    padding: 1.5rem .5rem
-  a
-    font-size: 1rem
-    line-height: 2rem
-    padding: .5rem !important
-    height: auto
-  .number
-    border-style: none
+    padding: 1rem
     border-top-left-radius: 8px
     border-bottom-left-radius: 8px
-  .send-link
-    text-transform: uppercase
+    min-width: 320px
+    &:focus
+      outline: 0
+  a.send-link
     border-top-right-radius: 8px
     border-bottom-right-radius: 8px
-
+    background-color: RGBA(68, 177, 123, 1)
+    display: table
+    vertical-align: middle
+    padding: 1.125rem
+    color: #fff
+    font-size: 1.2rem
+    height: auto
+    transition: background .3s ease-in-out
+    &:hover
+      background-color: RGBA(62, 194, 119, 1)
+      cursor: pointer
 .store-links a
-  position: absolute
   display: inline-block
   width: 170px
   height: 58px
-  margin-top: 40px
+  margin-top: 20px
+  margin-right: 20px
   background-repeat: no-repeat
 .app-store
   background-image: url('img/app-store-badge@2x.png')
@@ -85,4 +105,42 @@ body
 .play-store 
   background-image: url('img/play-store-badge@2x.png')
   background-size: 170px 58px
-  left: 210px
+
+.features
+  max-width: 920px
+  margin: 6rem auto
+  .left
+    max-width: 420px
+    float: left
+  h2
+    margin: 2rem 0 1rem 0
+    font-family: 'Roboto', sans-serif
+    font-weight: 100
+    color: RGBA(51, 51, 51, 1)
+    font-size: 3.4rem
+    line-height: 150%
+    letter-spacing: .8px
+    -webkit-text-stroke-width: .8px
+    -webkit-text-stroke-color: black
+  p 
+    font-weight: 300
+    color: #333
+    font-size: 1.4rem
+    line-height: 180%
+  .iphone-cung-an
+    position: relative
+    content: " "
+    margin-top: 6rem
+    background-image: url('img/iphone-feature-1-1x.png')
+    height: 500px
+    width: 398px
+    background-size: 398px 700px
+    border-bottom: solid 1px #eee
+    z-index: 1
+  .right
+    float: right
+    max-width: 400px
+    .to-mi-quang
+      display: block
+      margin-top: 8rem
+      margin-bottom: 120px

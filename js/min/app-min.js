@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#fake-number").on("click",function(){var t=$("#fake-alert");t.text()===t.data("text-swap")?t.text(t.data("text-org")):(t.data("text-org",t.text()),t.text(t.data("text-swap")))})});

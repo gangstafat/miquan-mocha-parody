@@ -1,9 +1,14 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300&subset=latin,vietnamese);
+html {
+  -webkit-font-smoothing: antialiased; }
+
 body {
-  background-color: #000;
-  font-family: "Helvetica Neue", Sans Serif;
-  font-size: 18px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  background-color: #fff;
+  font-family: "Roboto", Sans Serif;
+  font-size: 18px; }
+
+a {
+  text-decoration: none; }
 
 .header {
   position: relative;
@@ -23,62 +28,76 @@ body {
     opacity: 0.4;
     background-color: #2c2c2c; }
 
-.logo {
+.left-side {
+  position: relative;
+  min-width: 640px;
+  padding-left: 80px;
   z-index: 1; }
-  .logo img {
-    position: relative;
-    background-repeat: no-repeat;
-    width: 177px;
-    height: 39px;
-    margin-top: 6rem; }
-  .logo span {
-    display: block;
-    font-size: 1.2rem;
-    line-height: 3rem;
-    color: #fff; }
+
+.logo img {
+  background-repeat: no-repeat;
+  width: 177px;
+  height: 39px;
+  margin-top: 6rem; }
+.logo span {
+  display: block;
+  font-size: 1.2rem;
+  line-height: 3rem;
+  color: #fff; }
 
 .iphone, .android {
   position: absolute;
-  top: 93px;
+  top: 92px;
   left: 580px;
   z-index: 1; }
 
 .android {
   left: 820px;
-  z-index: 0; }
+  z-index: 0;
+  top: 93px; }
 
 .download {
+  max-width: 480px;
   margin-top: 2rem;
   padding: 1rem 0;
+  padding-bottom: 20px;
   border-bottom: solid 1px rgba(255, 255, 255, 0.2); }
   .download span {
-    color: #ccc;
+    display: block;
+    color: #fff;
     line-height: 3rem; }
-  .download input {
+  .download input.number {
+    border: none;
     display: inline-block;
     float: left;
     font-size: 1.2rem;
-    padding: 1.5rem 0.5rem; }
-  .download a {
-    font-size: 1rem;
-    line-height: 2rem;
-    padding: 0.5rem !important;
-    height: auto; }
-  .download .number {
-    border-style: none;
+    padding: 1rem;
     border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px; }
-  .download .send-link {
-    text-transform: uppercase;
+    border-bottom-left-radius: 8px;
+    min-width: 320px; }
+    .download input.number:focus {
+      outline: 0; }
+  .download a.send-link {
     border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px; }
+    border-bottom-right-radius: 8px;
+    background-color: RGBA(68, 177, 123, 1);
+    display: table;
+    vertical-align: middle;
+    padding: 1.125rem;
+    color: #fff;
+    font-size: 1.2rem;
+    height: auto;
+    transition: background 0.3s ease-in-out; }
+    .download a.send-link:hover {
+      background-color: RGBA(62, 194, 119, 1);
+      cursor: pointer; }
 
 .store-links a {
-  position: absolute;
   display: inline-block;
   width: 170px;
   height: 58px;
-  margin-top: 40px;
+  margin-top: 20px;
+  margin-right: 20px;
   background-repeat: no-repeat; }
 
 .app-store {
@@ -87,5 +106,43 @@ body {
 
 .play-store {
   background-image: url("img/play-store-badge@2x.png");
-  background-size: 170px 58px;
-  left: 210px; }
+  background-size: 170px 58px; }
+
+.features {
+  max-width: 920px;
+  margin: 6rem auto; }
+  .features .left {
+    max-width: 420px;
+    float: left; }
+  .features h2 {
+    margin: 2rem 0 1rem 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    color: RGBA(51, 51, 51, 1);
+    font-size: 3.4rem;
+    line-height: 150%;
+    letter-spacing: 0.8px;
+    -webkit-text-stroke-width: 0.8px;
+    -webkit-text-stroke-color: black; }
+  .features p {
+    font-weight: 300;
+    color: #333;
+    font-size: 1.4rem;
+    line-height: 180%; }
+  .features .iphone-cung-an {
+    position: relative;
+    content: " ";
+    margin-top: 6rem;
+    background-image: url("img/iphone-feature-1-1x.png");
+    height: 500px;
+    width: 398px;
+    background-size: 398px 700px;
+    border-bottom: solid 1px #eee;
+    z-index: 1; }
+  .features .right {
+    float: right;
+    max-width: 400px; }
+    .features .right .to-mi-quang {
+      display: block;
+      margin-top: 8rem;
+      margin-bottom: 120px; }
